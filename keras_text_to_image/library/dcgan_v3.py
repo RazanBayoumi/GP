@@ -200,12 +200,12 @@ class DCGanV3(object):
                 if (epoch * batch_size + batch_index) % 10 == 9:
                     self.generator.save_weights(DCGanV3.get_weight_file_path(model_dir_path, 'generator'), True)
                     self.discriminator.save_weights(DCGanV3.get_weight_file_path(model_dir_path, 'discriminator'), True)
-                    plt.plot(desc_plot)
-                    plt.plot(gen_plot)
-                    plt.title('Generator and Descriminator losses in epoch ' + str(epoch))
-                    plt.legend(['desc', 'gen'], loc='upper left')
-                    plt.savefig('data/plot')
-                    plt.close()
+                   # plt.plot(desc_plot)
+                   # plt.plot(gen_plot)
+                   # plt.title('Generator and Descriminator losses in epoch ' + str(epoch))
+                   # plt.legend(['desc', 'gen'], loc='upper left')
+                   # plt.savefig('data/plot')
+                   # plt.close()
 
         self.generator.save_weights(DCGanV3.get_weight_file_path(model_dir_path, 'generator'), True)
         self.discriminator.save_weights(DCGanV3.get_weight_file_path(model_dir_path, 'discriminator'), True)
